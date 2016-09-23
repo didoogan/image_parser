@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import scrapy
 import json
+import time
 
 from itertools import islice
 
@@ -12,7 +13,7 @@ from scraper.items import AppItem
 class ImageSpider(scrapy.Spider):
 
     name = "image"
-    results = 5
+    results = 10
     google_url_pattern = 'https://www.google.com.ua/search?q={}&biw=5&bih=5&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjy-OyRwKLPAhXJCpoKHVZDDJkQ_AUIBigB'
     yandex_url_pattern = 'https://yandex.ua/images/search?text={}&parent-reqid=1474550983897237-741190681254071648529266-sas1-1783'
     instagram_url_pattern = 'https://www.instagram.com/explore/tags/{}/?__a=1'
@@ -26,14 +27,14 @@ class ImageSpider(scrapy.Spider):
     #     'https://www.google.com.ua/search?q=animal&biw=5&bih=5&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjy-OyRwKLPAhXJCpoKHVZDDJkQ_AUIBigB',
     # ]
 
-    # def __init__(self, question=u'сиськи'.encode('utf-8'), google=True, yandex=False, instagram=False):
+    # def __init__(self, question=u'сиськи'.encode('utf-8'), google=True, yandex=True, instagram=False):
     #     super(ImageSpider, self).__init__()
     #     if google:
     #         self.start_urls.append(self.google_url.format(question))
     #     if yandex:
     #         self.start_urls.append(self.yandex_url.format(question))
 
-    def __init__(self, question=u'водопад'.encode('utf-8'), google=True, yandex=True, instagram=True):
+    def __init__(self, question=u'еноты'.encode('utf-8'), google=False, yandex=True, instagram=True):
         super(ImageSpider, self).__init__()
         if google:
             self.google_url = self.google_url_pattern.format(question)
@@ -62,6 +63,7 @@ class ImageSpider(scrapy.Spider):
                 # yandex_images = response.xpath('//a[@class="serp-item__link"]')
                 yandex_images = response.xpath('//*[contains(@class, "serp-item_group_search")]').xpath('./@data-bem').extract()
                 for image in islice(yandex_images, self.results):
+                    time.sleep(1)
                     item = AppItem()
                     image = json.loads(image)
                     image = image['serp-item']['preview'][0]['url']
