@@ -11,4 +11,5 @@ import scrapy
 class AppItem(scrapy.Item):
     google_img = scrapy.Field()
     yandex_img = scrapy.Field()
+    instagram_img = scrapy.Field()
 
