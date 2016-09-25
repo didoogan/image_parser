@@ -1,4 +1,4 @@
-#!/home/user/projects/image_parser/env/bin/python2
+#!/home/doogan/coding/python/projects/image_parser/env/bin/python2.7
 
 # -*- coding: utf-8 -*-
 import re
