@@ -13,7 +13,7 @@ from scraper.items import AppItem
 class ImageSpider(scrapy.Spider):
 
     name = "image"
-    results = 10
+    results = 3
     google_url_pattern = 'https://www.google.com.ua/search?q={}&biw=5&bih=5&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjy-OyRwKLPAhXJCpoKHVZDDJkQ_AUIBigB'
     yandex_url_pattern = 'https://yandex.ua/images/search?text={}&parent-reqid=1474550983897237-741190681254071648529266-sas1-1783'
     instagram_url_pattern = 'https://www.instagram.com/explore/tags/{}/?__a=1'
@@ -34,7 +34,7 @@ class ImageSpider(scrapy.Spider):
     #     if yandex:
     #         self.start_urls.append(self.yandex_url.format(question))
 
-    def __init__(self, question=u'еноты'.encode('utf-8'), google=False, yandex=True, instagram=True, **kwargs):
+    def __init__(self, question='сиськи', google=True, yandex=True, instagram=True, **kwargs):
         super(ImageSpider, self).__init__()
         if google:
             self.google_url = self.google_url_pattern.format(question)
