@@ -1,11 +1,15 @@
 # -*- coding: utf-8 -*-
 
-# Define your item pipelines here
-#
-# Don't forget to add your pipeline to the ITEM_PIPELINES setting
-# See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
+import redis
+
+from scrapy.exceptions import DropItem
 
 
 class ScraperPipeline(object):
+    def __init__(self):
+        self.redis = redis.StrictRedis()
+
     def process_item(self, item, spider):
-        return item
+        self.redis.lpush('items', item)
+        raise DropItem("{} has been saved".format(item))
+        # return item
