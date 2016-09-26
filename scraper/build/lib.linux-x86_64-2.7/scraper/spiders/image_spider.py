@@ -34,7 +34,7 @@ class ImageSpider(scrapy.Spider):
     #     if yandex:
     #         self.start_urls.append(self.yandex_url.format(question))
 
-    def __init__(self, question='сиськи', google=True, yandex=True, instagram=True, **kwargs):
+    def __init__(self, question='сиськи', google=False, yandex=False, instagram=False, **kwargs):
         super(ImageSpider, self).__init__()
         if google:
             self.google_url = self.google_url_pattern.format(question)
