@@ -14,5 +14,5 @@ class ScraperPipeline(object):
         # self.redis.lpush('items', item)
         # raise DropItem("{} has been saved".format(item))
         key = spider.query
-        self.redis.sadd(key, item)
+        self.redis.sadd(key, json.dumps(dict(item)))
         return item
