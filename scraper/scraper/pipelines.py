@@ -11,5 +11,5 @@ class ScraperPipeline(object):
 
     def process_item(self, item, spider):
         self.redis.lpush('items', item)
-        raise DropItem("{} has been saved".format(item))
-        # return item
+        # raise DropItem("{} has been saved".format(item))
+        return item

@@ -15,13 +15,6 @@ class InvokerView(FormView):
         # form.save()
         return super(InvokerView, self).form_valid(form)
 
-    # def get_context_data(self, **kwargs):
-    #     context = super(InvokerView, self).get_context_data(**kwargs)
-    #     r = redis.StrictRedis()
-    #     images = r.lrange('items', 0, 1)
-    #     context['images'] = images
-    #     return context
-
 
 class ResultView(TemplateView):
     template_name = 'scraper_invoker/result.html'
