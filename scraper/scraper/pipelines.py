@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import redis
+import json
 
 from scrapy.exceptions import DropItem
 

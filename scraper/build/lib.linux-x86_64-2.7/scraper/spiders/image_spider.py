@@ -17,24 +17,11 @@ class ImageSpider(scrapy.Spider):
     google_url_pattern = 'https://www.google.com.ua/search?q={}&biw=5&bih=5&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjy-OyRwKLPAhXJCpoKHVZDDJkQ_AUIBigB'
     yandex_url_pattern = 'https://yandex.ua/images/search?text={}&parent-reqid=1474550983897237-741190681254071648529266-sas1-1783'
     instagram_url_pattern = 'https://www.instagram.com/explore/tags/{}/?__a=1'
-    # instagram_url_pattern = 'https://www.instagram.com/explore/tags/{}/'
     google_url = False
     yandex_url = False
     instagram_url = False
 
-    # start_urls = [
-    #     # self.google_url.format(question),
-    #     'https://www.google.com.ua/search?q=animal&biw=5&bih=5&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjy-OyRwKLPAhXJCpoKHVZDDJkQ_AUIBigB',
-    # ]
-
-    # def __init__(self, question=u'сиськи'.encode('utf-8'), google=True, yandex=True, instagram=False):
-    #     super(ImageSpider, self).__init__()
-    #     if google:
-    #         self.start_urls.append(self.google_url.format(question))
-    #     if yandex:
-    #         self.start_urls.append(self.yandex_url.format(question))
-
-    def __init__(self, question='сиськи', google=False, yandex=False, instagram=False, **kwargs):
+    def __init__(self, question='dog', google=False, yandex=False, instagram=False, **kwargs):
         super(ImageSpider, self).__init__()
         if google:
             self.google_url = self.google_url_pattern.format(question)
@@ -42,6 +29,7 @@ class ImageSpider(scrapy.Spider):
             self.yandex_url = self.yandex_url_pattern.format(question)
         if instagram:
             self.instagram_url = self.instagram_url_pattern.format(question)
+        self.query = question
 
     def start_requests(self):
         if self.google_url:
@@ -60,15 +48,14 @@ class ImageSpider(scrapy.Spider):
                 yield item
 
     def yandex_parser(self, response):
-                # yandex_images = response.xpath('//a[@class="serp-item__link"]')
-                yandex_images = response.xpath('//*[contains(@class, "serp-item_group_search")]').xpath('./@data-bem').extract()
-                for image in islice(yandex_images, self.results):
-                    time.sleep(1)
-                    item = AppItem()
-                    image = json.loads(image)
-                    image = image['serp-item']['preview'][0]['url']
-                    item['yandex_img'] = image
-                    yield item
+        yandex_images = response.xpath('//*[contains(@class, "serp-item_group_search")]').xpath('./@data-bem').extract_first()
+        for image in islice(yandex_images, self.results):
+            time.sleep(1)
+            item = AppItem()
+            image = json.loads(image)
+            image = image['serp-item']['preview'][0]['url']
+            item['yandex_img'] = image
+            yield item
 
     def instagram_parser(self, response):
         xpath = response.xpath('//p/text()')
@@ -78,6 +65,9 @@ class ImageSpider(scrapy.Spider):
             item = AppItem()
             item['instagram_img'] = url['thumbnail_src']
             yield item
+
+    def parse(self, response):
+        pass
 
 
 
