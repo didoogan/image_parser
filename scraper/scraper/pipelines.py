@@ -10,6 +10,8 @@ class ScraperPipeline(object):
         self.redis = redis.StrictRedis()
 
     def process_item(self, item, spider):
-        self.redis.lpush('items', item)
+        # self.redis.lpush('items', item)
         # raise DropItem("{} has been saved".format(item))
+        key = spider.query
+        self.redis.sadd(key, item)
         return item

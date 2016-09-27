@@ -21,7 +21,7 @@ class ImageSpider(scrapy.Spider):
     yandex_url = False
     instagram_url = False
 
-    def __init__(self, question='сиськи', google=True, yandex=False, instagram=True, **kwargs):
+    def __init__(self, question='tree', google=True, yandex=False, instagram=True, **kwargs):
         super(ImageSpider, self).__init__()
         if google:
             self.google_url = self.google_url_pattern.format(question)
@@ -29,6 +29,7 @@ class ImageSpider(scrapy.Spider):
             self.yandex_url = self.yandex_url_pattern.format(question)
         if instagram:
             self.instagram_url = self.instagram_url_pattern.format(question)
+        self.query = question
 
     def start_requests(self):
         if self.google_url:
@@ -48,7 +49,7 @@ class ImageSpider(scrapy.Spider):
 
     def yandex_parser(self, response):
                 # yandex_images = response.xpath('//a[@class="serp-item__link"]')
-                yandex_images = response.xpath('//*[contains(@class, "serp-item_group_search")]').xpath('./@data-bem').extract()
+                yandex_images = response.xpath('//*[contains(@class, "serp-item_group_search")]').xpath('./@data-bem').extract_first()
                 for image in islice(yandex_images, self.results):
                     time.sleep(1)
                     item = AppItem()
@@ -65,6 +66,9 @@ class ImageSpider(scrapy.Spider):
             item = AppItem()
             item['instagram_img'] = url['thumbnail_src']
             yield item
+
+    def parse(self, response):
+        pass
 
 
 

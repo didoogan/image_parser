@@ -1,5 +1,5 @@
 import redis
-
+import requests
 
 from django import forms
 
