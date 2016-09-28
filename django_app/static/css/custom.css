@@ -1,3 +1,11 @@
 li {
     display: inline;
 }
+
+.img-thumbnail {
+    height: 150px;
+}
+
+img {
+    margin: 3px;
+}

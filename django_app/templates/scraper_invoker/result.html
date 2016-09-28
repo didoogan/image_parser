@@ -3,7 +3,25 @@
 {% load staticfiles %}
 
 {% block content %}
-    <h1>RESULT</h1>
 
-    {{ images }}
+    {% if google %}
+        <h3 align="center">Google images :</h3>
+        {% for src in google %}
+            <img class="img-thumbnail" src="{{ src }}" height="100px">
+        {% endfor %}
+    {% endif%}
+
+    {% if yandex %}
+        <h3 align="center">Yandex images :</h3>
+        {% for src in google %}
+            <img class="img-thumbnail" src="{{ src }}" height="100px">
+        {% endfor %}
+    {% endif%}
+
+    {% if instagram %}
+        <h3 align="center">Instagram images :</h3>
+        {% for src in instagram %}
+            <img class="img-thumbnail" src="{{ src }}" height="100px">
+        {% endfor %}
+    {% endif%}
 {% endblock %}

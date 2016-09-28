@@ -1,5 +1,6 @@
 import redis
 import requests
+import json
 
 from django import forms
 
@@ -13,7 +14,12 @@ class InvokerForm(forms.Form):
     query = forms.CharField(max_length=100)
     engines = forms.MultipleChoiceField(choices=ENGINES, widget=forms.CheckboxSelectMultiple())
 
-    # def save(self):
-    #     r = redis.StrictRedis()
-    #     images = r.lrange('items', 0, 1)
-    #     return images
+    def save(self):
+        query = self.cleaned_data.get('query')
+        engines = {'google': True, 'yandex': False, 'instagram': False}
+        engs = self.cleaned_data.get('engines')
+        for engine in engs:
+            engines[engine] = True
+        data = {'project': 'scraper', 'spider': 'image', 'question': query, 'google': engines['google'],
+                'yandex': engines['yandex'], 'instagram': engines['instagram']}
+        requests.post("http://localhost:6800/schedule.json", data=data)
