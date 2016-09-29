@@ -13,7 +13,10 @@ class ScraperPipeline(object):
     def process_item(self, item, spider):
         # self.redis.lpush('items', item)
         # raise DropItem("{} has been saved".format(item))
-        key = spider.query
-        self.r.sadd(key, json.dumps(dict(item)))
-        r.expire(key, 3600)
+
+        # key = spider.query
+        # self.r.sadd(key, json.dumps(dict(item)))
+        # r.expire(key, 3600)
+        item = json.dumps(dict(item))
+        r.publish('chanel', item)
         return item

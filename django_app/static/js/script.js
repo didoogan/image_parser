@@ -5,4 +5,5 @@ window.onload = function() {
 
     // var checkboxs = document.getElementById("id_engines");
     // checkboxs.className = "inline-block";
+    console.log("in script.js");
 };

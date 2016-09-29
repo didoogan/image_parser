@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block resultjs %}<script src="{% static 'js/result.js'%}"></script>{% endblock %}
+
+{% block content %}
+    <p>
+        Open your browser's JavaScript console to see what's happening (hit F12).
+    </p>
+   <button onclick='sendText();'>Send Text Message</button>
+   <button onclick='sendBinary();'>Send Binary Message</button>
+   <button onclick='closeConnection();'>Close Connection</button>
+
+{% endblock %}
+
