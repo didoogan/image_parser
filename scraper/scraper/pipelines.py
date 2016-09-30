@@ -9,16 +9,33 @@ from scrapy.exceptions import DropItem
 class ScraperPipeline(object):
     def __init__(self):
         self.r = redis.StrictRedis()
+        # self.google = {'google': []}
+        # self.yandex = {'yandex': []}
+        # self.instagram = {'instagram': []}
+        self.result = {'google': [], 'yandex': [], 'instagram': []}
 
     def process_item(self, item, spider):
-        # self.redis.lpush('items', item)
-        # raise DropItem("{} has been saved".format(item))
+        item = dict(item)
+        src = item.get('google_img', False)
+        if src:
+            # self.google['google'].append(src)
+            self.result['google'].append(src)
+            self.r.publish(spider.query, json.dumps(self.result))
+            return item
 
-        # key = spider.query
-        # self.r.sadd(key, json.dumps(dict(item)))
-        # r.expire(key, 3600)
-        # item = json.dumps(dict(item))
-        self.r.publish('chanel', json.dumps(dict(item)))
-        # self.r.publish('chanel', item)
-        print 'fuck'
-        return item
+        src = item.get('yandex_img', False)
+        if src:
+            self.result['yandex'].append(src)
+            self.r.publish(spider.query, json.dumps(self.result))
+            return item
+
+        src = item.get('instagram_img', False)
+        if src:
+            self.result['instagram'].append(src)
+            self.r.publish(spider.query, json.dumps(self.result))
+            return item
+
+        # self.r.publish('chanel', json.dumps(dict(item)))
+        # # self.r.publish('chanel', item)
+        # print 'fuck'
+

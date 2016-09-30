@@ -5,7 +5,7 @@
 {% block resultjs %}<script src="{% static 'js/result.js'%}"></script>{% endblock %}
 
 {% block content %}
-    <h3 align="center">Response for request <b>{{  query }}</b></h3>
+    <h3 align="center">Response for request <b>"{{  query }}"</b></h3>
     <p>
         Open your browser's JavaScript console to see what's happening (hit F12).
     </p>
@@ -13,8 +13,10 @@
    <button onclick='sendBinary();'>Send Binary Message</button>
    <button onclick='closeConnection();'>Close Connection</button>
 
-    <div id="result"></div>
+    <div id="google-img"></div>
+    <div id="yandex-img"></div>
+    <div id="instagram-img"></div>
 
-    <script>var query = {{  query }}</script>
+    <script>var query = "{{  query }}"</script>
 {% endblock %}
 

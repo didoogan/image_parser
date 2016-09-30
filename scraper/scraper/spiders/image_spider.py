@@ -26,7 +26,7 @@ class ImageSpider(scrapy.Spider):
     yandex_url = False
     instagram_url = False
 
-    def __init__(self, question='dog', google=True, yandex=False, instagram=False, **kwargs):
+    def __init__(self, question='dog', google=True, yandex=False, instagram=True, **kwargs):
 
         # for detecting the end of spiders work
         dispatcher.connect(self.spider_closed, signals.spider_closed)

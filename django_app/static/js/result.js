@@ -6,17 +6,23 @@
             socket.onopen = function() {
                console.log("Connected!");
                isopen = true;
+               sendText();
             }
             socket.onmessage = function(e) {
                if (typeof e.data == "string") {
                   console.log("Text message received: " + e.data);
 
+                   // e.data.forEach(function(item) {
+                   //    if(item == 'google')
+                   // });
+                   var googleImg = e.data['google']
+
                    var img = document.createElement("img");
-                   img.src = JSON.parse(e.data)['google_img'];
+                   img.src = JSON.parse(e.data);
                    var p = document.createElement("p");
                    // p.innerHTML = JSON.parse(e.data);
                    // p.innerHTML = e.data;
-                   console.log('data!!!!!!!!!!! ' + JSON.parse(e.data)['google_img']);
+                   console.log('data!!!!!!!!!!! ' + JSON.parse(e.data));
 
                    var src = document.getElementById("result");
                    src.appendChild(img);
@@ -38,7 +44,8 @@
          };
          function sendText() {
             if (isopen) {
-               socket.send("Hello, Dima!");
+               // socket.send("Hello, Dima!");
+               socket.send(query);
             } else {
                console.log("Connection not opened.")
             }
