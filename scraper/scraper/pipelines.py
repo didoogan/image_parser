@@ -20,19 +20,22 @@ class ScraperPipeline(object):
         if src:
             # self.google['google'].append(src)
             self.result['google'].append(src)
-            self.r.publish(spider.query, json.dumps(self.result))
+            # self.r.publish(spider.query, json.dumps(self.result))
+            self.r.hmset(spider.query, json.dumps(self.result))
             return item
 
         src = item.get('yandex_img', False)
         if src:
             self.result['yandex'].append(src)
-            self.r.publish(spider.query, json.dumps(self.result))
+            # self.r.publish(spider.query, json.dumps(self.result))
+            self.r.hmset(spider.query, json.dumps(self.result))
             return item
 
         src = item.get('instagram_img', False)
         if src:
             self.result['instagram'].append(src)
-            self.r.publish(spider.query, json.dumps(self.result))
+            # self.r.publish(spider.query, json.dumps(self.result))
+            self.r.hmset(spider.query, json.dumps(self.result))
             return item
 
         # self.r.publish('chanel', json.dumps(dict(item)))
