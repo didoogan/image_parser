@@ -2,22 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b9baed8-374e-4505-90e9-9715c51dcb0b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/303f9bf086fe11e68ccb003067d5bb3f.jl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/43459c2286fe11e68ccb003067d5bb3f.jl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/81f93d7c86f711e68ccb003067d5bb3f.jl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/85ee9df886fe11e68ccb003067d5bb3f.jl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/8fe0763c86fa11e68ccb003067d5bb3f.jl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/c71dd55086fe11e68ccb003067d5bb3f.jl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/super.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/006c4786871011e68ccb003067d5bb3f.jl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/278d68b0871311e68ccb003067d5bb3f.jl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/4549e252871311e68ccb003067d5bb3f.jl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/53a44bc6871311e68ccb003067d5bb3f.jl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/7c22faa0871511e68ccb003067d5bb3f.jl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/c31ea6d6871311e68ccb003067d5bb3f.jl" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scraper/dbs/scraper.db" afterPath="$PROJECT_DIR$/scraper/dbs/scraper.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_app/static/js/result.js" afterPath="$PROJECT_DIR$/django_app/static/js/result.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_app/templates/scraper_invoker/result_socket.html" afterPath="$PROJECT_DIR$/django_app/templates/scraper_invoker/result_socket.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scraper/build/lib.linux-x86_64-2.7/scraper/pipelines.py" afterPath="$PROJECT_DIR$/scraper/build/lib.linux-x86_64-2.7/scraper/pipelines.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scraper/build/lib.linux-x86_64-2.7/scraper/spiders/image_spider.py" afterPath="$PROJECT_DIR$/scraper/build/lib.linux-x86_64-2.7/scraper/spiders/image_spider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scraper/scraper/pipelines.py" afterPath="$PROJECT_DIR$/scraper/scraper/pipelines.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scraper/scraper/spiders/image_spider.py" afterPath="$PROJECT_DIR$/scraper/scraper/spiders/image_spider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scraper/twistd.pid" afterPath="$PROJECT_DIR$/scraper/twistd.pid" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scraper/super.json" afterPath="$PROJECT_DIR$/scraper/super.json" />
     </list>
     <ignored path="image_parser.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,8 +39,8 @@
       <file leaf-file-name="image_spider.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scraper/scraper/spiders/image_spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-229">
-              <caret line="28" column="80" selection-start-line="28" selection-start-column="80" selection-end-line="28" selection-end-column="80" />
+            <state relative-caret-position="54">
+              <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -57,8 +51,8 @@
       <file leaf-file-name="super.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scraper/super.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state relative-caret-position="841">
+              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -67,28 +61,28 @@
       <file leaf-file-name="result_socket.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_app/templates/scraper_invoker/result_socket.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+            <state relative-caret-position="270">
+              <caret line="15" column="19" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="result.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="result.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_app/static/js/result.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+            <state relative-caret-position="-204">
+              <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scraper/scraper/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="34" column="64" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
+            <state relative-caret-position="504">
+              <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
               <folding>
                 <element signature="e#25#37#0" expanded="true" />
               </folding>
@@ -925,47 +919,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scraper/super.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="841">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_app/templates/scraper_invoker/result_socket.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scraper/scraper/spiders/image_spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-229">
-          <caret line="28" column="80" selection-start-line="28" selection-start-column="80" selection-end-line="28" selection-end-column="80" />
+        <state relative-caret-position="54">
+          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scraper/super.json">
+    <entry file="file://$PROJECT_DIR$/django_app/static/js/result.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="-204">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scraper/scraper/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="34" column="64" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
+        <state relative-caret-position="504">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
           <folding>
             <element signature="e#25#37#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_app/templates/scraper_invoker/result_socket.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_app/static/js/result.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>

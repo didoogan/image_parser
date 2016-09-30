@@ -11,11 +11,17 @@
             socket.onmessage = function(e) {
                if (typeof e.data == "string") {
                   console.log("Text message received: " + e.data);
+                   var obj = JSON.parse(e.data)
 
-                   // e.data.forEach(function(item) {
-                   //    if(item == 'google')
-                   // });
-                   var googleImg = e.data['google']
+                   if(obj.hasOwnProperty('google')) {
+                       var googleImgs = obj['google']
+                       googleImgs.forEach(function (src) {
+                           var img = document.createElement("img");
+                           img.src = src;
+                           var googleDiv = document.getElementById('google-img');
+                           googleDiv.appendChild(img)
+                       })
+                   }
 
                    var img = document.createElement("img");
                    img.src = JSON.parse(e.data);
