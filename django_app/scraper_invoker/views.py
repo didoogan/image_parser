@@ -14,12 +14,12 @@ class InvokerView(FormView):
     success_url = 'result_socket'
 
     def form_valid(self, form):
-        # query = form.cleaned_data.get('query')
-        # self.success_url = '/result/' + query
+        query = form.cleaned_data.get('query')
+        self.success_url = '/result_socket/' + query
         # key = form.cleaned_data.get('query')
         # r = redis.StrictRedis()
         # images = r.smembers(key)
-        # form.save()
+        form.save()
         return super(InvokerView, self).form_valid(form)
 
     # def get_context_data(self, **kwargs):
@@ -28,6 +28,16 @@ class InvokerView(FormView):
     #     images = r.smembers()
     #     context['images'] = images
     #     return context
+
+
+class ResultSocketView(TemplateView):
+    template_name = "scraper_invoker/result_socket.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(ResultSocketView, self).get_context_data(**kwargs)
+        query = kwargs.get('query')
+        context['query'] = query
+        return context
 
 
 class ResultView(TemplateView):

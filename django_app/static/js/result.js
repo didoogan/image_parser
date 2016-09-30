@@ -10,6 +10,17 @@
             socket.onmessage = function(e) {
                if (typeof e.data == "string") {
                   console.log("Text message received: " + e.data);
+
+                   var img = document.createElement("img");
+                   img.src = JSON.parse(e.data)['google_img'];
+                   var p = document.createElement("p");
+                   // p.innerHTML = JSON.parse(e.data);
+                   // p.innerHTML = e.data;
+                   console.log('data!!!!!!!!!!! ' + JSON.parse(e.data)['google_img']);
+
+                   var src = document.getElementById("result");
+                   src.appendChild(img);
+                   
                } else {
                   var arr = new Uint8Array(e.data);
                   var hex = '';

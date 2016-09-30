@@ -16,7 +16,7 @@ class InvokerForm(forms.Form):
 
     def save(self):
         query = self.cleaned_data.get('query')
-        engines = {'google': True, 'yandex': False, 'instagram': False}
+        engines = {'google': False, 'yandex': False, 'instagram': False}
         engs = self.cleaned_data.get('engines')
         for engine in engs:
             engines[engine] = True

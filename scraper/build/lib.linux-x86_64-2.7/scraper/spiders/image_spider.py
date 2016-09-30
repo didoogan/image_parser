@@ -26,7 +26,7 @@ class ImageSpider(scrapy.Spider):
     yandex_url = False
     instagram_url = False
 
-    def __init__(self, question='dog', google=False, yandex=False, instagram=False, **kwargs):
+    def __init__(self, question='dog', google=True, yandex=False, instagram=False, **kwargs):
 
         # for detecting the end of spiders work
         dispatcher.connect(self.spider_closed, signals.spider_closed)
@@ -38,7 +38,7 @@ class ImageSpider(scrapy.Spider):
             self.instagram_url = self.instagram_url_pattern.format(question)
         self.query = question
         self.r = redis.StrictRedis()
-        self.r.set('flag', False)
+        # self.r.set('flag', False)
 
 
     def start_requests(self):
@@ -80,8 +80,9 @@ class ImageSpider(scrapy.Spider):
         if spider is not self:
             return
         # name = '{}_signal'.format(self.query)
-        self.r.set('flag', True)
-        self.r.expire(name, 3600)
+        # self.r.set('flag', True)
+        # self.r.expire('flag', 3600)
+        self.r.publish('flag', True)
 
     def parse(self, response):
         pass

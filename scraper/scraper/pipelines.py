@@ -17,6 +17,8 @@ class ScraperPipeline(object):
         # key = spider.query
         # self.r.sadd(key, json.dumps(dict(item)))
         # r.expire(key, 3600)
-        item = json.dumps(dict(item))
-        r.publish('chanel', item)
+        # item = json.dumps(dict(item))
+        self.r.publish('chanel', json.dumps(dict(item)))
+        # self.r.publish('chanel', item)
+        print 'fuck'
         return item

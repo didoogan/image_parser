@@ -5,6 +5,7 @@
 {% block resultjs %}<script src="{% static 'js/result.js'%}"></script>{% endblock %}
 
 {% block content %}
+    <h3 align="center">Response for request <b>{{  query }}</b></h3>
     <p>
         Open your browser's JavaScript console to see what's happening (hit F12).
     </p>
@@ -12,5 +13,8 @@
    <button onclick='sendBinary();'>Send Binary Message</button>
    <button onclick='closeConnection();'>Close Connection</button>
 
+    <div id="result"></div>
+
+    <script>var query = {{  query }}</script>
 {% endblock %}
 
