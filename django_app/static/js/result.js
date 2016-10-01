@@ -7,21 +7,27 @@
                console.log("Connected!");
                isopen = true;
                sendText();
-            }
+            };
             socket.onmessage = function(e) {
                if (typeof e.data == "string") {
                   console.log("Text message received: " + e.data);
-                   var obj = JSON.parse(e.data)
+                   var obj = JSON.parse(e.data);
 
-                   if(obj.hasOwnProperty('google')) {
-                       var googleImgs = obj['google']
-                       googleImgs.forEach(function (src) {
-                           var img = document.createElement("img");
-                           img.src = src;
-                           var googleDiv = document.getElementById('google-img');
-                           googleDiv.appendChild(img)
-                       })
-                   }
+                   // if(obj.hasOwnProperty('google')) {
+                   //     var googleImg = JSON.parse(obj['google']);
+                   //
+                   //     googleImg.forEach(function (src) {
+                   //         var img = document.createElement("img");
+                   //         img.src = src;
+                   //         var googleDiv = document.getElementById('google-img');
+                   //         googleDiv.appendChild(img)
+                   //     });
+                   // }
+                   renderEngineImgs(obj, 'google');
+                   renderEngineImgs(obj, 'yandex');
+                   renderEngineImgs(obj, 'instagram');
+
+
 
                    var img = document.createElement("img");
                    img.src = JSON.parse(e.data);
@@ -69,4 +75,25 @@
          };
          function closeConnection() {
              socket.onclose();
+         }
+
+
+         function renderEngineImgs(obj,engine) {
+             if (obj.hasOwnProperty(engine) && obj[engine][2] != null &&  obj[engine][2] != undefined) {
+                 var h3 = document.createElement('h3');
+                 h3.setAttribute("align", "center");
+                 var text = engine[0].toUpperCase() + engine.slice(1) + " images :";
+                 h3.appendChild(document.createTextNode(text));
+                 var engineDiv = document.getElementById(engine+'-img');
+                 engineDiv.appendChild(h3);
+
+                 var images = JSON.parse(obj[engine]);
+
+                 images.forEach(function (src) {
+                     var img = document.createElement("img");
+                     img.src = src;
+                     img.className = "img-thumbnail";
+                     engineDiv.appendChild(img)
+                 });
+             }
          }
