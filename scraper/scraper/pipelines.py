@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 
+
+import redis
+import json
+
 from scrapy.exceptions import DropItem
 
 
@@ -21,6 +25,7 @@ class ScraperPipeline(object):
             self.r.hmset(spider.query,
                          {'google': json.dumps(self.result['google']), 'yandex': json.dumps(self.result['yandex']),
                           'instagram': json.dumps(self.result['instagram'])})
+            self.r.expire(spider.query, 3600)
             return item
 
         src = item.get('yandex_img', False)
@@ -30,6 +35,7 @@ class ScraperPipeline(object):
             self.r.hmset(spider.query,
                          {'google': json.dumps(self.result['google']), 'yandex': json.dumps(self.result['yandex']),
                           'instagram': json.dumps(self.result['instagram'])})
+            self.r.expire(spider.query, 3600)
             return item
 
         src = item.get('instagram_img', False)
@@ -39,6 +45,7 @@ class ScraperPipeline(object):
             self.r.hmset(spider.query,
                          {'google': json.dumps(self.result['google']), 'yandex': json.dumps(self.result['yandex']),
                           'instagram': json.dumps(self.result['instagram'])})
+            self.r.expire(spider.query, 3600)
             return item
 
         # self.r.publish('chanel', json.dumps(dict(item)))

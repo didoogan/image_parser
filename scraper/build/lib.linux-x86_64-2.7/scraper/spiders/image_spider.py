@@ -10,7 +10,7 @@ from scrapy import signals
 
 from itertools import islice
 
-# from itertools import islice
+from itertools import islice
 
 from scraper.items import AppItem
 
@@ -26,7 +26,7 @@ class ImageSpider(scrapy.Spider):
     yandex_url = False
     instagram_url = False
 
-    def __init__(self, question='dog', google=True, yandex=False, instagram=True, **kwargs):
+    def __init__(self, question='dog', google=True, yandex=False, instagram=False, **kwargs):
 
         # for detecting the end of spiders work
         dispatcher.connect(self.spider_closed, signals.spider_closed)
@@ -39,7 +39,6 @@ class ImageSpider(scrapy.Spider):
         self.query = question
         self.r = redis.StrictRedis()
         # self.r.set('flag', False)
-
 
     def start_requests(self):
         if self.google_url:

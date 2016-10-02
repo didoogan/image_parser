@@ -13,16 +13,8 @@
                   console.log("Text message received: " + e.data);
                    var obj = JSON.parse(e.data);
 
-                   // if(obj.hasOwnProperty('google')) {
-                   //     var googleImg = JSON.parse(obj['google']);
-                   //
-                   //     googleImg.forEach(function (src) {
-                   //         var img = document.createElement("img");
-                   //         img.src = src;
-                   //         var googleDiv = document.getElementById('google-img');
-                   //         googleDiv.appendChild(img)
-                   //     });
-                   // }
+                   document.getElementsByClassName("loader").remove();
+
                    renderEngineImgs(obj, 'google');
                    renderEngineImgs(obj, 'yandex');
                    renderEngineImgs(obj, 'instagram');
@@ -97,3 +89,14 @@
                  });
              }
          }
+
+         Element.prototype.remove = function() {
+            this.parentElement.removeChild(this);
+        }
+        NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+            for(var i = this.length - 1; i >= 0; i--) {
+                if(this[i] && this[i].parentElement) {
+                    this[i].parentElement.removeChild(this[i]);
+                }
+            }
+}
