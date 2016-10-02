@@ -12,7 +12,7 @@
    <!--<button onclick='sendText();'>Send Text Message</button>-->
    <!--<button onclick='sendBinary();'>Send Binary Message</button>-->
    <!--<button onclick='closeConnection();'>Close Connection</button>-->
-    <div class="loader"></div>
+    {% if need_request != 'False'%}<div class="loader"></div>{% endif %}
     <div id="google-img"></div>
     <div id="yandex-img"></div>
     <div id="instagram-img"></div>

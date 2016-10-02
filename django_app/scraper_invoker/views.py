@@ -17,11 +17,11 @@ class InvokerView(FormView):
         query = form.cleaned_data.get('query')
         engines = '&'.join(form.cleaned_data.get('engines'))
         # self.success_url = '/result_socket/' + query
-        self.success_url = '{}{}/{}'.format('/result_socket/', query, engines)
+        need_request = form.save()
+        self.success_url = '{}{}/{}/{}'.format('/result_socket/', query, engines, need_request)
         # key = form.cleaned_data.get('query')
         # r = redis.StrictRedis()
         # images = r.smembers(key)
-        form.save()
         return super(InvokerView, self).form_valid(form)
 
     # def get_context_data(self, **kwargs):
@@ -41,6 +41,7 @@ class ResultSocketView(TemplateView):
         query = kwargs.get('query')
         engines = kwargs.get('engines').split('&')
         context['query'] = query
+        context['need_request'] = (kwargs.get('need_request'))
         result = r.hgetall(query)
         if result:
             result = {'google': json.loads(result['google']), 'yandex': json.loads(result['yandex']), 'instagram': json.loads(result['instagram'])}

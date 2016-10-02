@@ -28,3 +28,4 @@ class InvokerForm(forms.Form):
             data = {'project': 'scraper', 'spider': 'image', 'question': query, 'google': engines['google'],
                     'yandex': engines['yandex'], 'instagram': engines['instagram']}
             requests.post("http://localhost:6800/schedule.json", data=data)
+        return need_request
