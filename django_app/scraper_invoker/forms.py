@@ -15,11 +15,13 @@ class InvokerForm(forms.Form):
     engines = forms.MultipleChoiceField(choices=ENGINES, widget=forms.CheckboxSelectMultiple())
 
     def save(self):
+        r = redis.StrictRedis()
         query = self.cleaned_data.get('query')
         engines = {'google': False, 'yandex': False, 'instagram': False}
         engs = self.cleaned_data.get('engines')
         for engine in engs:
-            engines[engine] = True
+            if not r.hgetall(query).get(engine, False):
+                engines[engine] = True
         data = {'project': 'scraper', 'spider': 'image', 'question': query, 'google': engines['google'],
                 'yandex': engines['yandex'], 'instagram': engines['instagram']}
         requests.post("http://localhost:6800/schedule.json", data=data)
