@@ -34,9 +34,14 @@ class ResultSocketView(TemplateView):
     template_name = "scraper_invoker/result_socket.html"
 
     def get_context_data(self, **kwargs):
+        r = redis.StrictRedis()
         context = super(ResultSocketView, self).get_context_data(**kwargs)
         query = kwargs.get('query')
         context['query'] = query
+        result = r.hgetall(query)
+        if result:
+            result = {'google': json.loads(result['google']), 'yandex': json.loads(result['yandex']), 'instagram': json.loads(result['instagram'])}
+            context['result'] = result
         return context
 
 

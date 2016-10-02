@@ -17,6 +17,31 @@
     <div id="yandex-img"></div>
     <div id="instagram-img"></div>
 
+    {% if result.google %}
+        <h3 align="center">Google images :</h3>
+        {% for src in result.google %}
+            <img src="{{ src }}" height="150px" class="img-thumbnail">
+        {% endfor %}
+
+    {% endif %}
+
+    {% if result.yandex %}
+        <h3 align="center">Yandex images :</h3>
+        {% for src in result.yandex %}
+            <img src="{{ src }}" height="150px" class="img-thumbnail">
+        {% endfor %}
+    {% endif %}
+
+    {% if result.instagram %}
+        <h3 align="center">Instagram images :</h3>
+        {% for src in result.instagram %}
+            <img src="{{ src }}" height="150px" class="img-thumbnail">
+        {% endfor %}
+    {% endif %}
+
+
+{{ result }}
+
     <script>var query = "{{  query }}"</script>
 {% endblock %}
 
