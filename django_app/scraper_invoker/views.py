@@ -15,7 +15,9 @@ class InvokerView(FormView):
 
     def form_valid(self, form):
         query = form.cleaned_data.get('query')
-        self.success_url = '/result_socket/' + query
+        engines = '&'.join(form.cleaned_data.get('engines'))
+        # self.success_url = '/result_socket/' + query
+        self.success_url = '{}{}/{}'.format('/result_socket/', query, engines)
         # key = form.cleaned_data.get('query')
         # r = redis.StrictRedis()
         # images = r.smembers(key)

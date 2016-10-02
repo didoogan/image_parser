@@ -26,7 +26,7 @@ class ImageSpider(scrapy.Spider):
     yandex_url = False
     instagram_url = False
 
-    def __init__(self, question='dog', google=False, yandex=False, instagram=False, **kwargs):
+    def __init__(self, question='dog', google=True, yandex=False, instagram=True, **kwargs):
 
         # for detecting the end of spiders work
         dispatcher.connect(self.spider_closed, signals.spider_closed)
@@ -57,9 +57,9 @@ class ImageSpider(scrapy.Spider):
                 yield item
 
     def yandex_parser(self, response):
-        yandex_images = response.xpath('//*[contains(@class, "serp-item_group_search")]').xpath('./@data-bem').extract_first()
+        yandex_images = response.xpath('//*[contains(@class, "serp-item_group_search")]').xpath('./@data-bem').extract()
         for image in islice(yandex_images, self.results):
-            time.sleep(1)
+            time.sleep(0.5)
             item = AppItem()
             image = json.loads(image)
             image = image['serp-item']['preview'][0]['url']
