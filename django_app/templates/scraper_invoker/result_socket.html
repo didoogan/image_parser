@@ -17,24 +17,24 @@
     <div id="yandex-img"></div>
     <div id="instagram-img"></div>
 
-    {% if result.google %}
+    {% if google %}
         <h3 align="center">Google images :</h3>
-        {% for src in result.google %}
+        {% for src in google %}
             <img src="{{ src }}" height="150px" class="img-thumbnail">
         {% endfor %}
 
     {% endif %}
 
-    {% if result.yandex %}
+    {% if yandex %}
         <h3 align="center">Yandex images :</h3>
-        {% for src in result.yandex %}
+        {% for src in yandex %}
             <img src="{{ src }}" height="150px" class="img-thumbnail">
         {% endfor %}
     {% endif %}
 
-    {% if result.instagram %}
+    {% if instagram %}
         <h3 align="center">Instagram images :</h3>
-        {% for src in result.instagram %}
+        {% for src in instagram %}
             <img src="{{ src }}" height="150px" class="img-thumbnail">
         {% endfor %}
     {% endif %}

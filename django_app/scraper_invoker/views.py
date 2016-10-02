@@ -39,11 +39,14 @@ class ResultSocketView(TemplateView):
         r = redis.StrictRedis()
         context = super(ResultSocketView, self).get_context_data(**kwargs)
         query = kwargs.get('query')
+        engines = kwargs.get('engines').split('&')
         context['query'] = query
         result = r.hgetall(query)
         if result:
             result = {'google': json.loads(result['google']), 'yandex': json.loads(result['yandex']), 'instagram': json.loads(result['instagram'])}
-            context['result'] = result
+            # context['result'] = result
+            for engine in engines:
+                context[engine] = result[engine]
         return context
 
 
