@@ -10,5 +10,5 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 2.7.12 virtualenv at ~/coding/python/projects/image_parser/superenv" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 2.7.12 virtualenv at ~/projects/image_parser/megaenv" project-jdk-type="Python SDK" />
 </project>

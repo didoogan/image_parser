@@ -26,15 +26,15 @@ class ImageSpider(scrapy.Spider):
     yandex_url = False
     instagram_url = False
 
-    def __init__(self, question='dog', google=True, yandex=False, instagram=True, **kwargs):
+    def __init__(self, question='dog', google=False, yandex=False, instagram=False, **kwargs):
 
         # for detecting the end of spiders work
         dispatcher.connect(self.spider_closed, signals.spider_closed)
-        if google:
+        if google == 'True':
             self.google_url = self.google_url_pattern.format(question)
-        if yandex:
+        if yandex == 'True':
             self.yandex_url = self.yandex_url_pattern.format(question)
-        if instagram:
+        if instagram == 'True':
             self.instagram_url = self.instagram_url_pattern.format(question)
         self.query = question
         self.r = redis.StrictRedis()

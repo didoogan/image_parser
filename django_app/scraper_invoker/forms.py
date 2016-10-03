@@ -20,8 +20,12 @@ class InvokerForm(forms.Form):
         query = self.cleaned_data.get('query')
         engines = {'google': False, 'yandex': False, 'instagram': False}
         engs = self.cleaned_data.get('engines')
+
+        redis_result = r.hgetall(query)
+
         for engine in engs:
-            if not r.hgetall(query).get(engine, False):
+            # if not r.hgetall(query).get(engine, False):
+            if redis_result.get(engine) in (None, '[]'):
                 engines[engine] = True
                 need_request = True
         if need_request:
