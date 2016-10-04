@@ -2,86 +2,72 @@ import redis
 import time
 import json
 
+import uuid
+
+from django.utils.safestring import mark_safe
+
+
 from django.views.generic.edit import FormView
 from django.views.generic import TemplateView
 
 from .forms import InvokerForm
+from .models import Query
 
 
 class InvokerView(FormView):
+
     template_name = 'scraper_invoker/invoker.html'
     form_class = InvokerForm
     success_url = 'result_socket'
 
     def form_valid(self, form):
+        r = redis.StrictRedis()
         query = form.cleaned_data.get('query')
         engines = '&'.join(form.cleaned_data.get('engines'))
-        # self.success_url = '/result_socket/' + query
-        need_request = form.save()
-        self.success_url = '{}{}/{}/{}'.format('/result_socket/', query, engines, need_request)
-        # key = form.cleaned_data.get('query')
-        # r = redis.StrictRedis()
-        # images = r.smembers(key)
-        return super(InvokerView, self).form_valid(form)
+        data = form.save()
+        # self.success_url = '{}{}/{}/{}/{}'.format('/result_socket/', query, engines, data['need_request'], '&'.join(data['eng_for_websocket']))
+        # self.success_url = '{}{}/{}/{}/{}'.format('/result_socket/', query, engines, data['need_request'], json.dumps(data['eng_for_websocket']))
 
-    # def get_context_data(self, **kwargs):
-    #     context = super(InvokerView, self).get_context_data(**kwargs)
-    #     r = redis.StrictRedis()
-    #     images = r.smembers()
-    #     context['images'] = images
-    #     return context
+        data = {'query': query, 'need_spiner': data['need_request'], 'engines': engines,
+                  'socket_engines': json.dumps(data['eng_for_websocket'])}
+        id = uuid.uuid1()
+        r.hmset(id, data)
+        self.success_url = 'result_socket/{}'.format(id)
+
+        return super(InvokerView, self).form_valid(form)
 
 
 class ResultSocketView(TemplateView):
+
     template_name = "scraper_invoker/result_socket.html"
 
     def get_context_data(self, **kwargs):
         r = redis.StrictRedis()
         context = super(ResultSocketView, self).get_context_data(**kwargs)
-        query = kwargs.get('query')
-        engines = kwargs.get('engines').split('&')
+        id = kwargs.get('pk')
+        query = r.hget(id, 'query')
+        context['need_spiner'] = r.hget(id, 'need_spiner')
+        engines = r.hget(id, 'engines').split('&')
         context['query'] = query
-        context['need_request'] = (kwargs.get('need_request'))
+        socket_engines = r.hget(id, 'socket_engines')
+        context['socket_engines'] = mark_safe(socket_engines)
         result = r.hgetall(query)
         if result:
-            result = {'google': json.loads(result['google']), 'yandex': json.loads(result['yandex']), 'instagram': json.loads(result['instagram'])}
-            # context['result'] = result
             for engine in engines:
-                context[engine] = result[engine]
+                # try:
+                #     socket_engines = json.loads(socket_engines)
+                # except TypeError:
+                #     socket_engines = []
+                # socket_engines = json.loads(socket_engines)
+                if engine in socket_engines:
+                    continue
+                resp = result.get(engine, False)
+                if resp:
+                    # context[engine] = json.loads(result[engine])
+                    context[engine] = json.loads(resp)
         return context
 
 
 class ResultView(TemplateView):
     template_name = 'scraper_invoker/result.html'
-
-    # def get_context_data(self, **kwargs):
-    #     time.sleep(5)
-    #     query = kwargs.get('query')
-    #     context = super(ResultView, self).get_context_data(**kwargs)
-    #     r = redis.StrictRedis()
-    #     images = r.smembers(query)
-    #     images = map(json.loads, images)
-    #
-    #     context['google'] = []
-    #     context['yandex'] = []
-    #     context['instagram'] = []
-    #
-    #     for image in images:
-    #         src = image.get('google_img', False)
-    #         if src:
-    #             context['google'].append(src)
-    #             continue
-    #
-    #         src = image.get('yandex_img', False)
-    #         if src:
-    #             context['yandex'].append(src)
-    #             continue
-    #
-    #         src = image.get('instagram_img', False)
-    #         if src:
-    #             context['instagram'].append(src)
-    #             continue
-    #
-    #     return context
-
 

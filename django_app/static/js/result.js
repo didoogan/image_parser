@@ -13,7 +13,7 @@
                   console.log("Text message received: " + e.data);
                    var obj = JSON.parse(e.data);
 
-                   document.getElementsByClassName("loader").remove();
+
 
                    renderEngineImgs(obj, 'google');
                    renderEngineImgs(obj, 'yandex');
@@ -49,7 +49,7 @@
          function sendText() {
             if (isopen) {
                // socket.send("Hello, Dima!");
-               socket.send(query);
+               socket.send(JSON.stringify(socket_data));
             } else {
                console.log("Connection not opened.")
             }
@@ -71,6 +71,7 @@
 
 
          function renderEngineImgs(obj,engine) {
+             document.getElementsByClassName("loader").remove();
              if (obj.hasOwnProperty(engine) && obj[engine][2] != null &&  obj[engine][2] != undefined) {
                  var h3 = document.createElement('h3');
                  h3.setAttribute("align", "center");
@@ -92,7 +93,7 @@
 
          Element.prototype.remove = function() {
             this.parentElement.removeChild(this);
-        }
+        };
         NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
             for(var i = this.length - 1; i >= 0; i--) {
                 if(this[i] && this[i].parentElement) {

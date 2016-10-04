@@ -12,7 +12,7 @@
    <!--<button onclick='sendText();'>Send Text Message</button>-->
    <!--<button onclick='sendBinary();'>Send Binary Message</button>-->
    <!--<button onclick='closeConnection();'>Close Connection</button>-->
-    {% if need_request != 'False'%}<div class="loader"></div>{% endif %}
+    {% if need_spiner != 'False'%}<div class="loader"></div>{% endif %}
     <div id="google-img"></div>
     <div id="yandex-img"></div>
     <div id="instagram-img"></div>
@@ -42,6 +42,10 @@
 
 {{ result }}
 
-    <script>var query = "{{  query }}"</script>
+    <script>
+        var query = "{{  query }}";
+        var engines = '{{ socket_engines }}';
+        var socket_data = {"query": query, "engines": engines}
+    </script>
 {% endblock %}
 
