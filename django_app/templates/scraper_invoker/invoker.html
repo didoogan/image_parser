@@ -5,7 +5,18 @@
 
 {%  block content %}
     <form method='post'>{% csrf_token %}
-        {{ form.as_p }}
+        {% if form.engines.errors %}
+            <div class="alert alert-warning">
+                <p>You should check one or more engines</p>
+            </div>
+        {%endif %}
+        <label for="{{ form.query.id_for_label }}">Query:</label>
+        {{ form.query }}
+        <label for="{{ form.engines.id_for_label }}">Engines:</label>
+        {{ form.engines }}
+
+
+
         <input type='submit' value='Search images' class="btn btn-success">
     </form>
 {%  endblock content %}

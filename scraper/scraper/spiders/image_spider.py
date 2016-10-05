@@ -26,13 +26,19 @@ class ImageSpider(scrapy.Spider):
     yandex_url = False
     instagram_url = False
 
+    @classmethod
+    def str_to_bool(cls, s):
+        if s == 'True':
+            return True
+        return False
+
     def __init__(self, question='dog', google=True, yandex=False, instagram=False, **kwargs):
         super(ImageSpider, self).__init__(**kwargs)
-        if google == 'True':
+        if ImageSpider.str_to_bool(google):
             self.google_url = self.google_url_pattern.format(question)
-        if yandex == 'True':
+        if ImageSpider.str_to_bool(yandex):
             self.yandex_url = self.yandex_url_pattern.format(question)
-        if instagram == 'True':
+        if ImageSpider.str_to_bool(instagram):
             self.instagram_url = self.instagram_url_pattern.format(question)
         self.query = question
         self.r = redis.StrictRedis()
@@ -47,7 +53,6 @@ class ImageSpider(scrapy.Spider):
             yield scrapy.Request(self.instagram_url, callback=self.instagram_parser)
 
     def google_parser(self, response):
-            # questions = response.xpath('//div[@class="question-summary"]')
             google_images = response.xpath('//div[@id="ires"]//img')
             for image in islice(google_images, self.results):
                 item = AppItem()
@@ -74,14 +79,6 @@ class ImageSpider(scrapy.Spider):
             item['img'] = url['thumbnail_src']
             item['site'] = 'instagram'
             yield item
-
-    # def spider_closed(self, spider):
-    #     if spider is not self:
-    #         return
-        # name = '{}_signal'.format(self.query)
-        # self.r.set('flag', True)
-        # self.r.expire('flag', 3600)
-        # self.r.publish('flag', True)
 
     def parse(self, response):
         pass

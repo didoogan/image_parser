@@ -18,7 +18,6 @@ class InvokerForm(forms.Form):
         data = {}
         data['need_request'] = False
         data['eng_for_websocket'] = []
-        need_request = False
         r = redis.StrictRedis()
         query = self.cleaned_data.get('query')
         engines = {'google': False, 'yandex': False, 'instagram': False}
@@ -27,7 +26,6 @@ class InvokerForm(forms.Form):
         redis_result = r.hgetall(query)
 
         for engine in engs:
-            # if not r.hgetall(query).get(engine, False):
             if redis_result.get(engine) in (None, '[]'):
                 engines[engine] = True
                 data['eng_for_websocket'].append(engine)

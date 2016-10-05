@@ -25,13 +25,11 @@ class InvokerView(FormView):
         query = form.cleaned_data.get('query')
         engines = '&'.join(form.cleaned_data.get('engines'))
         data = form.save()
-        # self.success_url = '{}{}/{}/{}/{}'.format('/result_socket/', query, engines, data['need_request'], '&'.join(data['eng_for_websocket']))
-        # self.success_url = '{}{}/{}/{}/{}'.format('/result_socket/', query, engines, data['need_request'], json.dumps(data['eng_for_websocket']))
-
         data = {'query': query, 'need_spiner': data['need_request'], 'engines': engines,
                   'socket_engines': json.dumps(data['eng_for_websocket'])}
         id = uuid.uuid1()
         r.hmset(id, data)
+        r.expire(id, 30)
         self.success_url = 'result_socket/{}'.format(id)
 
         return super(InvokerView, self).form_valid(form)
@@ -54,16 +52,10 @@ class ResultSocketView(TemplateView):
         result = r.hgetall(query)
         if result:
             for engine in engines:
-                # try:
-                #     socket_engines = json.loads(socket_engines)
-                # except TypeError:
-                #     socket_engines = []
-                # socket_engines = json.loads(socket_engines)
                 if engine in socket_engines:
                     continue
                 resp = result.get(engine, False)
                 if resp:
-                    # context[engine] = json.loads(result[engine])
                     context[engine] = json.loads(resp)
         return context
 
