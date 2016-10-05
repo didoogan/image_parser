@@ -19,18 +19,9 @@
                    renderEngineImgs(obj, 'yandex');
                    renderEngineImgs(obj, 'instagram');
 
+                   document.getElementsByClassName("loader").remove();
 
 
-                   var img = document.createElement("img");
-                   img.src = JSON.parse(e.data);
-                   var p = document.createElement("p");
-                   // p.innerHTML = JSON.parse(e.data);
-                   // p.innerHTML = e.data;
-                   console.log('data!!!!!!!!!!! ' + JSON.parse(e.data));
-
-                   var src = document.getElementById("result");
-                   src.appendChild(img);
-                   
                } else {
                   var arr = new Uint8Array(e.data);
                   var hex = '';
@@ -65,13 +56,12 @@
                console.log("Connection not opened.")
             }
          };
+
+
          function closeConnection() {
              socket.onclose();
          }
-
-
          function renderEngineImgs(obj,engine) {
-             document.getElementsByClassName("loader").remove();
              if (obj.hasOwnProperty(engine) && obj[engine][2] != null &&  obj[engine][2] != undefined) {
                  var h3 = document.createElement('h3');
                  h3.setAttribute("align", "center");
@@ -79,7 +69,6 @@
                  h3.appendChild(document.createTextNode(text));
                  var engineDiv = document.getElementById(engine+'-img');
                  engineDiv.appendChild(h3);
-
                  var images = JSON.parse(obj[engine]);
 
                  images.forEach(function (src) {
@@ -88,13 +77,14 @@
                      img.className = "img-thumbnail";
                      engineDiv.appendChild(img)
                  });
+
              }
          }
 
          Element.prototype.remove = function() {
             this.parentElement.removeChild(this);
         };
-        NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+         NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
             for(var i = this.length - 1; i >= 0; i--) {
                 if(this[i] && this[i].parentElement) {
                     this[i].parentElement.removeChild(this[i]);

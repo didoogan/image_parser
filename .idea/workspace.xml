@@ -2,22 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b9baed8-374e-4505-90e9-9715c51dcb0b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/2277ec1c88f111e6a4f23c970e425ecd.jl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/3a1182c688f511e6a4f23c970e425ecd.jl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/4927da7288f411e6a4f23c970e425ecd.jl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/a113886088f611e6a4f23c970e425ecd.jl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/cf7baaaa88f311e6a4f23c970e425ecd.jl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/e9b3be3888f511e6a4f23c970e425ecd.jl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/items/scraper/image/58c422b683b711e6b63d003067d5bb3f.jl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/items/scraper/image/6d5a745683b611e6b63d003067d5bb3f.jl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/items/scraper/image/71cc8d0c83b711e6b63d003067d5bb3f.jl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/items/scraper/image/9b24b77a83b611e6b63d003067d5bb3f.jl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/items/scraper/image/b5036c6883b611e6b63d003067d5bb3f.jl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/4b50e938894e11e68ccb003067d5bb3f.jl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/5dcf275a894e11e68ccb003067d5bb3f.jl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/6d7b6f7c895011e68ccb003067d5bb3f.jl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/893eeaa4895011e68ccb003067d5bb3f.jl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/99f9a596895011e68ccb003067d5bb3f.jl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/items/scraper/image/e1e8eff2894f11e68ccb003067d5bb3f.jl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scraper/super.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbs/scraper.db" afterPath="$PROJECT_DIR$/dbs/scraper.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scraper/dbs/scraper.db" afterPath="$PROJECT_DIR$/scraper/dbs/scraper.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/image_parser.iml" afterPath="$PROJECT_DIR$/.idea/image_parser.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_app/scraper_invoker/forms.py" afterPath="$PROJECT_DIR$/django_app/scraper_invoker/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_app/static/js/result.js" afterPath="$PROJECT_DIR$/django_app/static/js/result.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scraper/build/lib.linux-x86_64-2.7/scraper/items.py" afterPath="$PROJECT_DIR$/scraper/build/lib.linux-x86_64-2.7/scraper/items.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scraper/build/lib.linux-x86_64-2.7/scraper/pipelines.py" afterPath="$PROJECT_DIR$/scraper/build/lib.linux-x86_64-2.7/scraper/pipelines.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scraper/build/lib.linux-x86_64-2.7/scraper/spiders/image_spider.py" afterPath="$PROJECT_DIR$/scraper/build/lib.linux-x86_64-2.7/scraper/spiders/image_spider.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scraper/scraper/items.py" afterPath="$PROJECT_DIR$/scraper/scraper/items.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scraper/scraper/pipelines.py" afterPath="$PROJECT_DIR$/scraper/scraper/pipelines.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scraper/scraper/spiders/image_spider.py" afterPath="$PROJECT_DIR$/scraper/scraper/spiders/image_spider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scraper/twistd.pid" afterPath="$PROJECT_DIR$/scraper/twistd.pid" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/twistd.pid" afterPath="$PROJECT_DIR$/twistd.pid" />
     </list>
     <ignored path="image_parser.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,8 +38,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/image_parser$Django.coverage" NAME="Django Coverage Results" MODIFIED="1475488701147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/django_app" />
-    <SUITE FILE_PATH="coverage/image_parser$DEBUGER.coverage" NAME="DEBUGER Coverage Results" MODIFIED="1475248709261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scraper/scraper" />
+    <SUITE FILE_PATH="coverage/image_parser$Django.coverage" NAME="Django Coverage Results" MODIFIED="1475651064259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/django_app" />
+    <SUITE FILE_PATH="coverage/image_parser$DEBUGER.coverage" NAME="DEBUGER Coverage Results" MODIFIED="1475651703994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scraper/scraper" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -50,14 +58,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="image_spider.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="image_spider.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scraper/scraper/spiders/image_spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
-              <folding>
-                <element signature="e#24#37#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="216">
+              <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -65,20 +71,8 @@
       <file leaf-file-name="super.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scraper/super.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding>
-                <marker date="1475473675846" expanded="true" signature="0:171" ph="[...]" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="result_socket.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/django_app/templates/scraper_invoker/result_socket.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -87,10 +81,10 @@
       <file leaf-file-name="result.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_app/static/js/result.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+            <state relative-caret-position="378">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
-                <marker date="1475473674658" expanded="true" signature="93:354" ph="{...}" />
+                <marker date="1475595636380" expanded="true" signature="93:354" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -99,8 +93,8 @@
       <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scraper/scraper/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="23" column="67" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
+            <state relative-caret-position="522">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -109,11 +103,41 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_app/scraper_invoker/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="829">
-              <caret line="74" column="50" selection-start-line="74" selection-start-column="50" selection-end-line="74" selection-end-column="50" />
+            <state relative-caret-position="218">
+              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="autoreload.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/megaenv/local/lib/python2.7/site-packages/django/utils/autoreload.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4716">
+              <caret line="273" column="0" selection-start-line="273" selection-start-column="0" selection-end-line="273" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="os.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/megaenv/lib/python2.7/os.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9846">
+              <caret line="547" column="0" selection-start-line="547" selection-start-column="0" selection-end-line="547" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="basehttp.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/megaenv/local/lib/python2.7/site-packages/django/core/servers/basehttp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2628">
+              <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -121,33 +145,9 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_app/scraper_invoker/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="1" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="24" />
-              <folding>
-                <element signature="e#1#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="invoker.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/django_app/templates/scraper_invoker/invoker.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+            <state relative-caret-position="198">
+              <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/django_app/scraper_invoker/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="27" column="56" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -162,20 +162,21 @@
       <list>
         <option value="$PROJECT_DIR$/scraper/scrapy.cfg" />
         <option value="$PROJECT_DIR$/scraper/scraper/settings.py" />
-        <option value="$PROJECT_DIR$/scraper/scraper/items.py" />
         <option value="$PROJECT_DIR$/django_app/templates/scraper_invoker/result.html" />
         <option value="$PROJECT_DIR$/django_app/static/js/script.js" />
         <option value="$PROJECT_DIR$/django_app/templates/base.html" />
         <option value="$PROJECT_DIR$/django_app/templates/scraper_invoker/invoker.html" />
-        <option value="$PROJECT_DIR$/django_app/static/js/result.js" />
         <option value="$PROJECT_DIR$/django_app/static/css/custom.css" />
-        <option value="$PROJECT_DIR$/scraper/scraper/pipelines.py" />
         <option value="$PROJECT_DIR$/scraper/super.json" />
-        <option value="$PROJECT_DIR$/django_app/scraper_invoker/urls.py" />
-        <option value="$PROJECT_DIR$/django_app/scraper_invoker/views.py" />
-        <option value="$PROJECT_DIR$/django_app/templates/scraper_invoker/result_socket.html" />
-        <option value="$PROJECT_DIR$/scraper/scraper/spiders/image_spider.py" />
+        <option value="$PROJECT_DIR$/scraper/scraper/items.py" />
         <option value="$PROJECT_DIR$/django_app/scraper_invoker/forms.py" />
+        <option value="$PROJECT_DIR$/scraper/scraper/pipelines.py" />
+        <option value="$PROJECT_DIR$/django_app/templates/scraper_invoker/result_socket.html" />
+        <option value="$PROJECT_DIR$/django_app/scraper_invoker/models.py" />
+        <option value="$PROJECT_DIR$/django_app/scraper_invoker/views.py" />
+        <option value="$PROJECT_DIR$/django_app/scraper_invoker/urls.py" />
+        <option value="$PROJECT_DIR$/django_app/static/js/result.js" />
+        <option value="$PROJECT_DIR$/scraper/scraper/spiders/image_spider.py" />
       </list>
     </option>
   </component>
@@ -186,9 +187,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="52" />
-    <option name="width" value="1910" />
-    <option name="height" value="998" />
+    <option name="y" value="24" />
+    <option name="width" value="1920" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -215,8 +216,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -259,7 +258,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="django_app" />
+              <option name="myItemId" value="scraper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scraper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="image_parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="image_parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scraper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scraper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spiders" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -276,13 +301,11 @@
               <option name="myItemId" value="django_app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scraper_invoker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -291,8 +314,9 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Sqlite (Xerial)" />
   </component>
-  <component name="RunManager" selected="Python.Django">
+  <component name="RunManager" selected="Python.DEBUGER">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -515,7 +539,7 @@
       <module name="image_parser" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/env/bin/scrapy" />
-      <option name="PARAMETERS" value="crawl image" />
+      <option name="PARAMETERS" value="crawl image -a google=True -ayandex=True -a question=tits" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
@@ -559,26 +583,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="52" width="1910" height="998" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="24" width="1920" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20439914" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2054429" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299389" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299389" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22451194" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45816326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35683298" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37040818" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -596,10 +620,15 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/scraper/scraper/spiders/image_spider.py</url>
-          <line>59</line>
-          <option name="timeStamp" value="129" />
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/scraper/scraper/pipelines.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="220" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/scraper/scraper/pipelines.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="221" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -612,45 +641,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="152" />
+      <option name="time" value="222" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scraper/items/scraper/image/916f8460835e11e6abf53c970e425ecd.jl" />
-    <entry file="file://$PROJECT_DIR$/scraper/items/scraper/image/92402972836211e6abf53c970e425ecd.jl" />
-    <entry file="file://$PROJECT_DIR$/items/default/image/ce663854830a11e685373c970e425ecd.jl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="97" selection-start-line="3" selection-start-column="97" selection-end-line="3" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/local/lib/python2.7/site-packages/scrapy/middleware.py" />
-    <entry file="file://$PROJECT_DIR$/superenv/local/lib/python2.7/site-packages/django/forms/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/superenv/local/lib/python2.7/site-packages/django/forms/forms.py" />
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16272">
-          <caret line="939" column="0" selection-start-line="939" selection-start-column="0" selection-end-line="939" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/superenv/local/lib/python2.7/site-packages/django/utils/deprecation.py" />
-    <entry file="file://$PROJECT_DIR$/scraper/twistd.pid">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/superenv/lib/python2.7/genericpath.py" />
     <entry file="file://$PROJECT_DIR$/django_app/django_app/urls.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -678,20 +673,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/superenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py" />
-    <entry file="file://$PROJECT_DIR$/scraper/scraper/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/superenv/local/lib/python2.7/site-packages/django/utils/autoreload.py" />
     <entry file="file://$PROJECT_DIR$/superenv/lib/python2.7/os.py" />
     <entry file="file://$PROJECT_DIR$/env/local/lib/python2.7/site-packages/twisted/internet/defer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10314">
           <caret line="586" column="0" selection-start-line="586" selection-start-column="0" selection-end-line="586" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -699,18 +686,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/env/local/lib/python2.7/site-packages/twisted/_threads/_threadworker.py" />
-    <entry file="file://$PROJECT_DIR$/django_app/static/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django_app/templates/scraper_invoker/result.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -753,13 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python2.7/SocketServer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python2.7/dist-packages/scrapy/spiders/__init__.py" />
     <entry file="file:///usr/local/lib/python2.7/dist-packages/scrapy/crawler.py" />
     <entry file="file:///usr/lib/python2.7/dist-packages/twisted/internet/defer.py" />
@@ -767,14 +739,6 @@
     <entry file="file:///usr/local/lib/python2.7/dist-packages/scrapy/pipelines/__init__.py" />
     <entry file="file:///usr/local/lib/python2.7/dist-packages/scrapy/middleware.py" />
     <entry file="file:///usr/local/lib/python2.7/dist-packages/scrapy/core/scraper.py" />
-    <entry file="file://$PROJECT_DIR$/scraper/scraper/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="23" column="67" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -789,79 +753,185 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_app/scraper_invoker/urls.py">
+    <entry file="file://$PROJECT_DIR$/scraper/scraper/items.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="13" column="1" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="24" />
-          <folding>
-            <element signature="e#1#33#0" expanded="true" />
-          </folding>
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_app/scraper_invoker/views.py">
+    <entry file="file://$PROJECT_DIR$/megaenv/local/lib/python2.7/site-packages/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="829">
-          <caret line="74" column="50" selection-start-line="74" selection-start-column="50" selection-end-line="74" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="280">
+          <caret line="189" column="0" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/megaenv/lib/python2.7/os.py">
+    <entry file="file://$PROJECT_DIR$/megaenv/local/lib/python2.7/site-packages/django/views/generic/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="548" column="0" selection-start-line="548" selection-start-column="0" selection-end-line="548" selection-end-column="0" />
+        <state relative-caret-position="179">
+          <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scraper/scraper/spiders/image_spider.py">
+    <entry file="file://$PROJECT_DIR$/django_app/static/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="162">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scraper/super.json">
+    <entry file="file://$PROJECT_DIR$/django_app/scraper_invoker/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <marker date="1475473675846" expanded="true" signature="0:171" ph="[...]" />
-          </folding>
+        <state relative-caret-position="455">
+          <caret line="37" column="75" selection-start-line="37" selection-start-column="75" selection-end-line="37" selection-end-column="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/django_app/templates/scraper_invoker/result_socket.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="108">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/b449ccd5/49b56f32-8feb-4768-86b0-9fc41b93404a/django_migrations">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/49b56f32-8feb-4768-86b0-9fc41b93404a/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_app/scraper_invoker/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaenv/local/lib/python2.7/site-packages/django/core/servers/basehttp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2628">
+          <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/b449ccd5/49b56f32-8feb-4768-86b0-9fc41b93404a/scraper_invoker_query">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaenv/lib/python2.7/os.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9846">
+          <caret line="547" column="0" selection-start-line="547" selection-start-column="0" selection-end-line="547" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_app/scraper_invoker/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/django_app/static/js/result.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        <state relative-caret-position="378">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <marker date="1475473674658" expanded="true" signature="93:354" ph="{...}" />
+            <marker date="1475595636380" expanded="true" signature="93:354" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_app/scraper_invoker/forms.py">
+    <entry file="file:///usr/lib/python2.7/SocketServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="27" column="56" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
+        <state relative-caret-position="476">
+          <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaenv/local/lib/python2.7/site-packages/django/utils/autoreload.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4716">
+          <caret line="273" column="0" selection-start-line="273" selection-start-column="0" selection-end-line="273" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_app/scraper_invoker/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaenv/local/lib/python2.7/site-packages/twisted/_threads/_threadworker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scraper/scraper/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scraper/super.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaenv/local/lib/python2.7/site-packages/scrapy/spiders/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+          <folding>
+            <element signature="e#84#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scraper/scraper/spiders/image_spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>

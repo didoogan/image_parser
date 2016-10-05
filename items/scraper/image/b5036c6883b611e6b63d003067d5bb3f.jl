@@ -1,9 +1,0 @@
-{"google_img": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTTARvWl4B6iY-iYUNL5-Oem9ayhyJkuVK245I0J9Ngyle1lNK-LO--yqAs"}
-{"google_img": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQB2lWqiTL2Xuz3bzAdysvMV8XjpFHLZSHjOfZevMTU1rYdO3CkHQW9yMvz"}
-{"google_img": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQoP7wMpPhpd8AzeyBxf4udEQfcOPEnLJv7jqVjpFedJL59rZp6zTHcOZE"}
-{"instagram_img": "https://scontent.cdninstagram.com/t51.2885-15/s640x640/e15/14334737_188502938242683_2915299568595763200_n.jpg?ig_cache_key=MTM0NzY1NTU5MTkzNzQ4MTE5NQ%3D%3D.2"}
-{"instagram_img": "https://scontent.cdninstagram.com/t51.2885-15/e35/c80.0.480.480/14369233_1691575024503258_4181596055059562496_n.jpg?ig_cache_key=MTM0NzY1NTU1MzM3NTA4OTcxOQ%3D%3D.2.c"}
-{"instagram_img": "https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c122.0.836.836/14449163_312231069141871_4290873801324888064_n.jpg?ig_cache_key=MTM0NzY1NTIwMDUxNzQwMjI2MQ%3D%3D.2.c"}
-{"yandex_img": "http://lifeuse.ru/wp-content/uploads/2014/08/1280754781_natural-grandeur-glacier-national-park-montana.jpg"}
-{"yandex_img": "http://jtimes.ru/images/img_news/lexa/326708_53e6f.jpg"}
-{"yandex_img": "http://www.look.com.ua/download.php?file=201310/2560x1600/look.com.ua-80673.jpg"}

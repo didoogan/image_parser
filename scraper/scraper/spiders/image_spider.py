@@ -26,10 +26,8 @@ class ImageSpider(scrapy.Spider):
     yandex_url = False
     instagram_url = False
 
-    def __init__(self, question='dog', google=False, yandex=False, instagram=False, **kwargs):
-
-        # for detecting the end of spiders work
-        dispatcher.connect(self.spider_closed, signals.spider_closed)
+    def __init__(self, question='dog', google=True, yandex=False, instagram=False, **kwargs):
+        super(ImageSpider, self).__init__(**kwargs)
         if google == 'True':
             self.google_url = self.google_url_pattern.format(question)
         if yandex == 'True':
@@ -53,17 +51,18 @@ class ImageSpider(scrapy.Spider):
             google_images = response.xpath('//div[@id="ires"]//img')
             for image in islice(google_images, self.results):
                 item = AppItem()
-                item['google_img'] = image.xpath('@src').extract_first()
+                item['img'] = image.xpath('@src').extract_first()
+                item['site'] = 'google'
                 yield item
 
     def yandex_parser(self, response):
         yandex_images = response.xpath('//*[contains(@class, "serp-item_group_search")]').xpath('./@data-bem').extract()
         for image in islice(yandex_images, self.results):
-            time.sleep(0.5)
             item = AppItem()
             image = json.loads(image)
             image = image['serp-item']['preview'][0]['url']
-            item['yandex_img'] = image
+            item['img'] = image
+            item['site'] = 'yandex'
             yield item
 
     def instagram_parser(self, response):
@@ -72,16 +71,17 @@ class ImageSpider(scrapy.Spider):
         data = dict['tag']['media']['nodes']
         for url in islice(data, self.results):
             item = AppItem()
-            item['instagram_img'] = url['thumbnail_src']
+            item['img'] = url['thumbnail_src']
+            item['site'] = 'instagram'
             yield item
 
-    def spider_closed(self, spider):
-        if spider is not self:
-            return
+    # def spider_closed(self, spider):
+    #     if spider is not self:
+    #         return
         # name = '{}_signal'.format(self.query)
         # self.r.set('flag', True)
         # self.r.expire('flag', 3600)
-        self.r.publish('flag', True)
+        # self.r.publish('flag', True)
 
     def parse(self, response):
         pass

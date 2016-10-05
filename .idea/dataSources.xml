@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="839119728">
-    <data-source source="LOCAL" name="Sqlite (Xerial) - identifier.sqlite" uuid="49b56f32-8feb-4768-86b0-9fc41b93404a">
+  <component name="DataSourceManagerImpl" format="xml" hash="4191690032">
+    <data-source source="LOCAL" name="Sqlite (Xerial) - db.sqlite3" uuid="49b56f32-8feb-4768-86b0-9fc41b93404a">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:identifier.sqlite</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/django_app/db.sqlite3</jdbc-url>
     </data-source>
   </component>
 </project>
